@@ -1,0 +1,131 @@
+/* Vision & Mission Styling */
+.vision-mission-section {
+  position: relative;
+  background-color: #F7F8FA;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.vm-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--color-border-light);
+  padding: 44px 40px;
+  box-shadow: 0 10px 30px rgba(16, 39, 72, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.vm-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-navy);
+  transition: background var(--transition-normal);
+}
+
+.vision-card .vm-card-accent {
+  background: linear-gradient(90deg, #102748 0%, #D8AC45 100%);
+}
+
+.mission-card .vm-card-accent {
+  background: linear-gradient(90deg, #D8AC45 0%, #102748 100%);
+}
+
+.vm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(16, 39, 72, 0.12);
+  border-color: rgba(216, 172, 69, 0.4);
+}
+
+.vm-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: rgba(216, 172, 69, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all var(--transition-normal);
+}
+
+.vm-icon {
+  color: #B58B2E;
+  transition: transform var(--transition-normal);
+}
+
+.vm-card:hover .vm-icon-wrapper {
+  background: var(--color-navy);
+  box-shadow: 0 8px 20px rgba(16, 39, 72, 0.2);
+}
+
+.vm-card:hover .vm-icon {
+  color: var(--color-gold);
+  transform: scale(1.08);
+}
+
+.vm-card-type {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #C39738;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.vm-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+  margin-bottom: 16px;
+}
+
+.vm-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.vm-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.vm-footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  background: var(--color-bg-light);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .vm-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vm-card {
+    padding: 32px 24px;
+  }
+}

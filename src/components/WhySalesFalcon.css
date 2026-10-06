@@ -1,0 +1,211 @@
+/* Why Sales Falcon Dark Navy Section Styles */
+.why-section {
+  position: relative;
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.why-grid-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.why-gold-ambient {
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(216, 172, 69, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
+.why-subtitle {
+  color: #B4C0D0;
+}
+
+.why-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .why-cards-grid > .why-card:nth-child(4) {
+    grid-column: 1 / span 1;
+    margin-left: auto;
+    width: 100%;
+  }
+  .why-cards-grid > .why-card:nth-child(5) {
+    grid-column: 2 / span 1;
+    width: 100%;
+  }
+}
+
+.why-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 34px 28px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.why-card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background var(--transition-normal);
+}
+
+.why-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-6px);
+  border-color: rgba(216, 172, 69, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.why-card:hover .why-card-glow {
+  background: linear-gradient(90deg, transparent, #D8AC45, transparent);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(216, 172, 69, 0.15);
+  color: var(--color-gold);
+  border: 1px solid rgba(216, 172, 69, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.why-card:hover .why-icon-box {
+  background: var(--color-gold);
+  color: #0A1B33;
+}
+
+.why-index {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: rgba(216, 172, 69, 0.6);
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.why-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.why-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #D4DFEC !important;
+  margin-bottom: 18px;
+}
+
+.why-card-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+}
+
+.why-card-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: #9FB1C8;
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+.why-highlight-icon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Why Bottom Banner */
+.why-footer-banner {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(216, 172, 69, 0.1) 100%);
+  border: 1px solid rgba(216, 172, 69, 0.35);
+  border-radius: 16px;
+  padding: 36px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+.why-banner-tagline {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.why-banner-heading {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 991px) {
+  .why-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-footer-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-card {
+    padding: 26px 20px;
+  }
+}

@@ -1,0 +1,12 @@
+/* App Container Styles */
+.sales-falcon-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-bg-light);
+}
+
+main {
+  flex: 1 0 auto;
+}

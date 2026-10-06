@@ -1,0 +1,122 @@
+/* Ideal Clients Section Styles */
+.ideal-clients-section {
+  position: relative;
+  background-color: #F7F8FA;
+}
+
+.ideal-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (min-width: 992px) {
+  .ideal-clients-grid > .client-card:nth-child(4) {
+    grid-column: 1 / span 1;
+    margin-left: auto;
+    width: 100%;
+  }
+  .ideal-clients-grid > .client-card:nth-child(5) {
+    grid-column: 2 / span 1;
+    width: 100%;
+  }
+}
+
+.client-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-light);
+  border-radius: 16px;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.client-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition-normal);
+}
+
+.client-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(216, 172, 69, 0.4);
+  box-shadow: 0 16px 40px rgba(16, 39, 72, 0.08);
+}
+
+.client-card:hover .client-card-accent {
+  background: linear-gradient(90deg, #102748 0%, #D8AC45 100%);
+}
+
+.client-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(216, 172, 69, 0.12);
+  color: #B58B2E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all var(--transition-normal);
+}
+
+.client-card:hover .client-icon-box {
+  background: var(--color-navy);
+  color: var(--color-gold);
+}
+
+.client-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.client-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.client-card-action {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.client-card-action:hover {
+  color: #C39738;
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .ideal-clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ideal-clients-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .client-card {
+    padding: 26px 20px;
+  }
+}

@@ -1,0 +1,135 @@
+/* Value Strip Styling */
+.valuestrip-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -30px;
+  padding-bottom: 50px;
+}
+
+.valuestrip-wrapper {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(216, 172, 69, 0.25);
+  box-shadow: 0 16px 40px rgba(16, 39, 72, 0.08);
+  padding: 32px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.valuestrip-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #102748 0%, #D8AC45 50%, #102748 100%);
+}
+
+.valuestrip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.valuestrip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+}
+
+.valuestrip-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(16, 39, 72, 0.08);
+}
+
+.valuestrip-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(216, 172, 69, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.valuestrip-icon {
+  color: #B58B2E;
+  transition: transform var(--transition-normal);
+}
+
+.valuestrip-item:hover .valuestrip-icon-box {
+  background: var(--color-navy);
+  box-shadow: 0 4px 14px rgba(16, 39, 72, 0.25);
+}
+
+.valuestrip-item:hover .valuestrip-icon {
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.valuestrip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.valuestrip-item-num {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #C39738;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.valuestrip-title {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.valuestrip-desc {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .valuestrip-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+
+  .valuestrip-item:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .valuestrip-section {
+    margin-top: -10px;
+  }
+
+  .valuestrip-wrapper {
+    padding: 24px 20px;
+  }
+
+  .valuestrip-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .valuestrip-item::after {
+    display: none !important;
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salesfalcon.vercel.app/sitemap.xml
