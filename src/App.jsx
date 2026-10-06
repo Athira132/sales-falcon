@@ -1,50 +1,49 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ValueStrip from './components/ValueStrip';
-import About from './components/About';
-import VisionMission from './components/VisionMission';
-import Services from './components/Services';
-import Values from './components/Values';
-import Process from './components/Process';
-import WhySalesFalcon from './components/WhySalesFalcon';
-import PerformanceSystems from './components/PerformanceSystems';
-import ToolsSystems from './components/ToolsSystems';
-import IdealClients from './components/IdealClients';
-import CTASection from './components/CTASection';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Process from './pages/Process';
+import WhySalesFalcon from './pages/WhySalesFalcon';
+import Contact from './pages/Contact';
+
 import './App.css';
 
 export default function App() {
   return (
-    <div className="sales-falcon-app">
-      {/* Sticky Header Navigation */}
-      <Navbar />
+    <Router>
+      <div className="sales-falcon-app">
+        {/* Scroll restoration helper */}
+        <ScrollToTop />
 
-      {/* Main Website Structure */}
-      <main id="main-content">
-        <Hero />
-        <ValueStrip />
-        <About />
-        <VisionMission />
-        <Services />
-        <Values />
-        <Process />
-        <WhySalesFalcon />
-        <PerformanceSystems />
-        <ToolsSystems />
-        <IdealClients />
-        <CTASection />
-        <Contact />
-      </main>
+        {/* Sticky Header Navigation with prominent logo & active state */}
+        <Navbar />
 
-      {/* Site Footer */}
-      <Footer />
+        {/* 6 Dedicated Landing Page Routes */}
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/why-sales-falcon" element={<WhySalesFalcon />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* Catch-all redirect to Home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
 
-      {/* Sticky Floating WhatsApp Contact Widget */}
-      <WhatsAppButton />
-    </div>
+        {/* Sophisticated Charcoal / Graphite Footer */}
+        <Footer />
+
+        {/* Sticky Floating WhatsApp Contact Widget (Icon Only) */}
+        <WhatsAppButton />
+      </div>
+    </Router>
   );
 }

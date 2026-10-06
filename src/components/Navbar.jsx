@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight, Phone, MessageSquare } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,11 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   // Close mobile menu on escape key
   useEffect(() => {
@@ -43,23 +50,19 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Process', href: '#process' },
-    { name: 'Why Sales Falcon', href: '#why-us' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Process', path: '/process' },
+    { name: 'Why Sales Falcon', path: '/why-sales-falcon' },
+    { name: 'Contact', path: '/contact' },
   ];
-
-  const handleLinkClick = () => {
-    setMobileMenuOpen(false);
-  };
 
   return (
     <header className={`navbar-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        {/* Brand Logo */}
-        <a href="#hero" className="navbar-logo-link" aria-label="Sales Falcon Home">
+        {/* Brand Logo - Noticeably larger, preserving aspect ratio */}
+        <Link to="/" className="navbar-logo-link" aria-label="Sales Falcon Home">
           <img
             src="/images/sales-falcon-logo.png"
             alt="Sales Falcon - We Power Your Sales Team"
@@ -68,16 +71,22 @@ export default function Navbar() {
               e.currentTarget.src = 'https://i.ibb.co/qMxDMvbn/Sales-Falcon-Logo-with-Golden-Emblem.png';
             }}
           />
-        </a>
+        </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links with active route state */}
         <nav className="navbar-nav desktop-only" aria-label="Main Navigation">
           <ul className="navbar-menu">
             {navLinks.map((link) => (
-              <li key={link.name} className="navbar-item">
-                <a href={link.href} className="navbar-link">
+              <li key={link.path} className="navbar-item">
+                <NavLink
+                  to={link.path}
+                  end={link.path === '/'}
+                  className={({ isActive }) =>
+                    `navbar-link ${isActive ? 'active-link' : ''}`
+                  }
+                >
                   {link.name}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -85,10 +94,10 @@ export default function Navbar() {
 
         {/* Desktop Action Button */}
         <div className="navbar-actions desktop-only">
-          <a href="#contact" className="btn btn-gold btn-sm navbar-cta">
+          <Link to="/contact" className="btn btn-gold btn-sm navbar-cta">
             <span>Let's Talk</span>
             <ArrowUpRight size={16} />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle Button */}
@@ -99,7 +108,7 @@ export default function Navbar() {
           aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
           id="mobile-nav-toggle"
         >
-          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -108,17 +117,22 @@ export default function Navbar() {
         className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
         aria-hidden={!mobileMenuOpen}
       >
-        <div className="mobile-drawer-backdrop" onClick={() => setMobileMenuOpen(false)} />
+        <div
+          className="mobile-drawer-backdrop"
+          onClick={() => setMobileMenuOpen(false)}
+        />
         <div className="mobile-drawer-panel">
           <div className="mobile-drawer-header">
-            <img
-              src="/images/sales-falcon-logo.png"
-              alt="Sales Falcon"
-              className="mobile-drawer-logo"
-              onError={(e) => {
-                e.currentTarget.src = 'https://i.ibb.co/qMxDMvbn/Sales-Falcon-Logo-with-Golden-Emblem.png';
-              }}
-            />
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+              <img
+                src="/images/sales-falcon-logo.png"
+                alt="Sales Falcon"
+                className="mobile-drawer-logo"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://i.ibb.co/qMxDMvbn/Sales-Falcon-Logo-with-Golden-Emblem.png';
+                }}
+              />
+            </Link>
             <button
               className="mobile-drawer-close"
               onClick={() => setMobileMenuOpen(false)}
@@ -134,27 +148,30 @@ export default function Navbar() {
 
           <ul className="mobile-drawer-menu">
             {navLinks.map((link) => (
-              <li key={link.name} className="mobile-drawer-item">
-                <a
-                  href={link.href}
-                  className="mobile-drawer-link"
-                  onClick={handleLinkClick}
+              <li key={link.path} className="mobile-drawer-item">
+                <NavLink
+                  to={link.path}
+                  end={link.path === '/'}
+                  className={({ isActive }) =>
+                    `mobile-drawer-link ${isActive ? 'active-mobile-link' : ''}`
+                  }
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
 
           <div className="mobile-drawer-actions">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="btn btn-gold btn-lg w-full mobile-cta-btn"
-              onClick={handleLinkClick}
+              onClick={() => setMobileMenuOpen(false)}
             >
               <span>Let's Talk</span>
               <ArrowUpRight size={18} />
-            </a>
+            </Link>
 
             <div className="mobile-quick-contact">
               <a href="tel:9633199772" className="mobile-contact-pill">

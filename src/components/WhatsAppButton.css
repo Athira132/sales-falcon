@@ -1,4 +1,4 @@
-/* Sticky WhatsApp Floating Button Styles */
+/* Sticky WhatsApp Floating Button - Icon Only */
 .sticky-whatsapp-container {
   position: fixed;
   bottom: 28px;
@@ -7,55 +7,39 @@
 }
 
 .sticky-whatsapp-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
   background: #25D366;
   color: #FFFFFF;
-  border-radius: 9999px;
-  padding: 8px 18px 8px 8px;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 3px 8px rgba(0, 0, 0, 0.12);
   text-decoration: none;
   transition: all var(--transition-normal);
   border: 2px solid #FFFFFF;
+  cursor: pointer;
 }
 
 .sticky-whatsapp-btn:hover {
   background: #20BA5A;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5), 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5), 0 4px 12px rgba(0, 0, 0, 0.18);
   color: #FFFFFF;
 }
 
-.whatsapp-icon-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform var(--transition-normal);
-}
-
-.sticky-whatsapp-btn:hover .whatsapp-icon-circle {
-  transform: rotate(12deg);
+.sticky-whatsapp-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .whatsapp-svg {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
-.whatsapp-label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-/* Mobile: Compact circular button */
+/* Mobile compact */
 @media (max-width: 640px) {
   .sticky-whatsapp-container {
     bottom: 20px;
@@ -63,27 +47,13 @@
   }
 
   .sticky-whatsapp-btn {
-    padding: 0;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    justify-content: center;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-  }
-
-  .whatsapp-icon-circle {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: #FFFFFF;
+    width: 52px;
+    height: 52px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.42);
   }
 
   .whatsapp-svg {
     width: 28px;
     height: 28px;
-  }
-
-  .whatsapp-label {
-    display: none !important;
   }
 }

@@ -1,0 +1,334 @@
+/* Dedicated About Page Styles */
+.about-promise-box {
+  background: linear-gradient(135deg, #102748 0%, #0A1B33 100%);
+  border: 1px solid rgba(216, 172, 69, 0.35);
+  border-radius: 18px;
+  padding: 44px 38px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 16px 40px rgba(16, 39, 72, 0.12);
+}
+
+.promise-emblem-wrap {
+  flex-shrink: 0;
+}
+
+.promise-emblem-img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(216, 172, 69, 0.4));
+}
+
+.promise-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.promise-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.promise-quote {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Vision & Mission Cards */
+.about-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.about-vm-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-light);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: 0 8px 24px rgba(16, 39, 72, 0.05);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.about-vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-navy);
+}
+
+.about-vm-card.vision::before {
+  background: linear-gradient(90deg, #102748 0%, #D8AC45 100%);
+}
+
+.about-vm-card.mission::before {
+  background: linear-gradient(90deg, #D8AC45 0%, #102748 100%);
+}
+
+.about-vm-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(216, 172, 69, 0.4);
+  box-shadow: 0 16px 36px rgba(16, 39, 72, 0.1);
+}
+
+.about-vm-type {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #C39738;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.about-vm-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 14px;
+}
+
+.about-vm-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Falcon Concept Story */
+.about-falcon-story-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.story-bg-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.falcon-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 992px) {
+  .falcon-story-grid > .falcon-story-card:nth-child(4) {
+    grid-column: 1 / span 1;
+    margin-left: auto;
+    width: 100%;
+  }
+  .falcon-story-grid > .falcon-story-card:nth-child(5) {
+    grid-column: 2 / span 1;
+    width: 100%;
+  }
+}
+
+.falcon-story-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 30px 24px;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-normal);
+}
+
+.falcon-story-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(216, 172, 69, 0.4);
+  transform: translateY(-4px);
+}
+
+.story-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: rgba(216, 172, 69, 0.15);
+  color: var(--color-gold);
+  border: 1px solid rgba(216, 172, 69, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.story-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.story-card-sub {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.story-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #D4DFEC;
+  margin: 0;
+}
+
+/* Core Values Grid */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+@media (min-width: 992px) {
+  .about-values-grid > .about-value-card:nth-child(4) {
+    grid-column: 1 / span 1;
+    margin-left: auto;
+    width: 100%;
+  }
+  .about-values-grid > .about-value-card:nth-child(5) {
+    grid-column: 2 / span 1;
+    width: 100%;
+  }
+}
+
+.about-value-card {
+  background: #F7F8FA;
+  border: 1px solid var(--color-border-light);
+  border-radius: 14px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.about-value-card:hover {
+  background: #FFFFFF;
+  transform: translateY(-4px);
+  border-color: rgba(216, 172, 69, 0.4);
+  box-shadow: 0 12px 30px rgba(16, 39, 72, 0.08);
+}
+
+.about-value-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.about-value-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-value-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.about-value-tagline {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.about-value-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* About Bottom CTA */
+.about-bottom-cta {
+  background: #F7F8FA;
+  border: 1px solid var(--color-border-light);
+  border-radius: 16px;
+  padding: 44px 32px;
+  text-align: center;
+}
+
+.about-bottom-cta h3 {
+  font-size: 1.6rem;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.about-bottom-cta p {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.about-cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .about-promise-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-vm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .falcon-story-grid,
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .falcon-story-grid,
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-promise-box {
+    padding: 30px 20px;
+  }
+
+  .about-cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-cta-btns .btn {
+    width: 100%;
+  }
+}

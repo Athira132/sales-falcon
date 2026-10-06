@@ -1,6 +1,6 @@
-/* Footer Styles */
+/* Footer Styles - Sophisticated Dark Charcoal / Graphite (#181A1F) */
 .site-footer {
-  background-color: #0A1B33;
+  background-color: #181A1F;
   color: #FFFFFF;
   padding: 80px 0 36px;
   border-top: 1px solid rgba(216, 172, 69, 0.25);
@@ -22,12 +22,13 @@
 
 .footer-logo-link {
   display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .footer-logo-img {
-  height: 48px;
-  width: auto;
+  width: 170px;
+  height: auto;
+  max-height: 56px;
   object-fit: contain;
 }
 
@@ -45,7 +46,7 @@
 .footer-description {
   font-size: 0.9375rem;
   line-height: 1.65;
-  color: #B4C0D0;
+  color: #A6AFBD;
   margin-bottom: 18px;
   max-width: 440px;
 }
@@ -53,7 +54,7 @@
 .footer-brand-motto {
   font-size: 0.8125rem;
   font-style: italic;
-  color: #D4DFEC;
+  color: #DCE2EB;
   border-left: 2px solid var(--color-gold);
   padding-left: 12px;
 }
@@ -77,8 +78,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
-  color: #B4C0D0;
+  font-size: 0.925rem;
+  color: #A6AFBD;
   text-decoration: none;
   transition: all var(--transition-fast);
 }
@@ -90,7 +91,7 @@
 
 .footer-contact-intro {
   font-size: 0.875rem;
-  color: #B4C0D0;
+  color: #A6AFBD;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -106,7 +107,7 @@
   align-items: center;
   gap: 14px;
   padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   text-decoration: none;
@@ -114,8 +115,8 @@
 }
 
 .footer-contact-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(216, 172, 69, 0.35);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(216, 172, 69, 0.4);
   transform: translateY(-2px);
 }
 
@@ -146,7 +147,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #8794A5;
+  color: #8E98A7;
 }
 
 .footer-contact-value {
@@ -167,7 +168,7 @@
 
 .footer-copyright {
   font-size: 0.84rem;
-  color: #8794A5;
+  color: #8E98A7;
   margin: 0;
 }
 
@@ -177,7 +178,7 @@
   gap: 8px;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #D4DFEC;
+  color: #DCE2EB;
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 0.8125rem;
@@ -200,6 +201,10 @@
 
   .footer-brand-col {
     grid-column: 1 / -1;
+  }
+
+  .footer-logo-img {
+    width: 150px;
   }
 }
 

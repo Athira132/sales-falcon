@@ -1,0 +1,256 @@
+/* Dedicated Why Sales Falcon Page Styles */
+.why-pillars-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.why-pillar-card {
+  background: #F7F8FA;
+  border: 1px solid var(--color-border-light);
+  border-radius: 18px;
+  padding: 40px 36px;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-navy);
+  transition: background var(--transition-normal);
+}
+
+.why-pillar-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(216, 172, 69, 0.45);
+  box-shadow: 0 16px 40px rgba(16, 39, 72, 0.08);
+  transform: translateY(-3px);
+}
+
+.why-pillar-card:hover::before {
+  background: var(--color-gold);
+}
+
+.pillar-header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.pillar-counter {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #C39738;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.pillar-headings {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pillar-sub-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #C39738;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.pillar-main-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.pillar-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.why-pillar-card:hover .pillar-icon-box {
+  background: var(--color-navy);
+  color: var(--color-gold);
+}
+
+.pillar-lead-statement {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.pillar-body-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* THE FALCON MINDSET SECTION */
+.falcon-mindset-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.mindset-visual-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.mindset-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.mindset-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--transition-normal);
+}
+
+.mindset-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(216, 172, 69, 0.4);
+  transform: translateY(-4px);
+}
+
+.mindset-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(216, 172, 69, 0.15);
+  color: var(--color-gold);
+  border: 1px solid rgba(216, 172, 69, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.mindset-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.mindset-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.mindset-desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: #D4DFEC;
+  margin: 0;
+}
+
+/* Why Bottom CTA */
+.why-bottom-cta {
+  background: #F7F8FA;
+  border: 1px solid var(--color-border-light);
+  border-radius: 18px;
+  padding: 48px 36px;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.why-bottom-cta h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-navy);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.why-bottom-cta p {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.why-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .mindset-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mindset-cards-grid > .mindset-card:nth-child(4) {
+    grid-column: 1 / span 1;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  .mindset-cards-grid > .mindset-card:nth-child(5) {
+    grid-column: 2 / span 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-pillar-card {
+    padding: 28px 20px;
+  }
+
+  .pillar-header-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .mindset-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .why-cta-buttons .btn {
+    width: 100%;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, MessageSquare, ArrowUp, ChevronRight } from 'lucide-react';
 import './Footer.css';
 
@@ -8,12 +9,12 @@ export default function Footer() {
   };
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Process', href: '#process' },
-    { name: 'Why Sales Falcon', href: '#why-us' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Process', path: '/process' },
+    { name: 'Why Sales Falcon', path: '/why-sales-falcon' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -22,7 +23,7 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Brand Info Column */}
           <div className="footer-brand-col">
-            <a href="#hero" className="footer-logo-link" aria-label="Sales Falcon Home">
+            <Link to="/" className="footer-logo-link" aria-label="Sales Falcon Home">
               <img
                 src="/images/sales-falcon-logo.png"
                 alt="Sales Falcon - We Power Your Sales Team"
@@ -31,7 +32,7 @@ export default function Footer() {
                   e.currentTarget.src = 'https://i.ibb.co/qMxDMvbn/Sales-Falcon-Logo-with-Golden-Emblem.png';
                 }}
               />
-            </a>
+            </Link>
 
             <div className="footer-brand-statement">
               <span className="footer-tagline">WE POWER YOUR SALES TEAM.</span>
@@ -51,11 +52,11 @@ export default function Footer() {
             <h4 className="footer-col-title">Navigation</h4>
             <ul className="footer-menu">
               {navLinks.map((link) => (
-                <li key={link.name} className="footer-menu-item">
-                  <a href={link.href} className="footer-menu-link">
+                <li key={link.path} className="footer-menu-item">
+                  <Link to={link.path} className="footer-menu-link">
                     <ChevronRight size={14} className="gold-text" />
                     <span>{link.name}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
