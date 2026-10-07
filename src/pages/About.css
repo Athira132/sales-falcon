@@ -107,7 +107,142 @@
   margin: 0;
 }
 
-/* Falcon Concept Story */
+/* Editorial Leadership Section with Single Professional Indian Image */
+.about-leadership-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-editorial-title {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.about-editorial-para {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.about-pillar-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+
+.about-check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.about-editorial-image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Subtle gold frame around the image — NOT inside a generic rectangular card with excessive shadow */
+.about-photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.about-photo-gold-border {
+  position: absolute;
+  inset: -12px -12px -12px -12px;
+  border: 1.5px solid rgba(216, 172, 69, 0.45);
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-photo-gold-border::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 24px;
+  height: 24px;
+  border-top: 3px solid var(--color-gold);
+  border-right: 3px solid var(--color-gold);
+  border-top-right-radius: 12px;
+}
+
+.about-photo-gold-border::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 3px solid var(--color-gold);
+  border-left: 3px solid var(--color-gold);
+  border-bottom-left-radius: 12px;
+}
+
+.about-leader-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(16, 39, 72, 0.12);
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.about-photo-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(16, 39, 72, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(216, 172, 69, 0.35);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.badge-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-main {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.badge-sub {
+  font-size: 0.72rem;
+  color: var(--color-gold);
+}
+
+/* Falcon Concept Story - 6 Items (3 x 2 grid) */
 .about-falcon-story-section {
   position: relative;
   overflow: hidden;
@@ -123,18 +258,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-}
-
-@media (min-width: 992px) {
-  .falcon-story-grid > .falcon-story-card:nth-child(4) {
-    grid-column: 1 / span 1;
-    margin-left: auto;
-    width: 100%;
-  }
-  .falcon-story-grid > .falcon-story-card:nth-child(5) {
-    grid-column: 2 / span 1;
-    width: 100%;
-  }
 }
 
 .falcon-story-card {
@@ -189,7 +312,7 @@
   margin: 0;
 }
 
-/* Core Values Grid */
+/* Core Values Grid - Exactly 6 Items in 3 x 2 grid on desktop */
 .about-values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -197,16 +320,16 @@
   margin-bottom: 56px;
 }
 
-@media (min-width: 992px) {
-  .about-values-grid > .about-value-card:nth-child(4) {
-    grid-column: 1 / span 1;
-    margin-left: auto;
-    width: 100%;
-  }
-  .about-values-grid > .about-value-card:nth-child(5) {
-    grid-column: 2 / span 1;
-    width: 100%;
-  }
+.about-value-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-value-num {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-gold);
 }
 
 .about-value-card {
@@ -297,6 +420,11 @@
 }
 
 @media (max-width: 991px) {
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   .about-promise-box {
     flex-direction: column;
     text-align: center;

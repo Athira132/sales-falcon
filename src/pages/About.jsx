@@ -11,7 +11,8 @@ import {
   Handshake, 
   RefreshCw, 
   CheckCircle2, 
-  ArrowRight 
+  ArrowRight,
+  Award
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import './About.css';
@@ -19,67 +20,91 @@ import './About.css';
 export default function About() {
   const falconPillars = [
     {
+      num: '01',
       title: 'SHARP VISION',
       subtitle: 'Observation & Opportunity',
       desc: 'The falcon spots target prey from miles away. We identify high-probability revenue opportunities and diagnose pipeline bottlenecks with razor-sharp clarity.',
       icon: Eye,
     },
     {
+      num: '02',
       title: 'UNWAVERING FOCUS',
       subtitle: 'Targeted Execution',
       desc: 'No distractions. We focus your sales team on qualified prospects, rigorous follow-up rhythms, and high-impact daily sales activity.',
       icon: Compass,
     },
     {
+      num: '03',
       title: 'DECISIVE SPEED',
       subtitle: 'Momentum & Conversion',
       desc: 'Rapid deal progression without losing precision. We streamline proposal cycles and objection management to prevent pipeline stall.',
       icon: Zap,
     },
     {
+      num: '04',
       title: 'METICULOUS PRECISION',
       subtitle: 'Repeatable Systems',
       desc: 'Consistent results require exact processes. From qualification checklists to CRM stages, every action is structured and repeatable.',
       icon: Target,
     },
     {
-      title: 'SUSTAINABLE GROWTH',
-      subtitle: 'Upward Trajectory',
+      num: '05',
+      title: 'UPWARD GROWTH',
+      subtitle: 'Continuous Trajectory',
       desc: 'The upward arrow represents continuous improvement, performance elevation, and long-term business health.',
       icon: TrendingUp,
+    },
+    {
+      num: '06',
+      title: 'ENDURING RESILIENCE',
+      subtitle: 'Sustainable Capability',
+      desc: 'Building institutional sales muscle that withstands market cycles, competitive headwinds, and team turnover.',
+      icon: ShieldCheck,
     },
   ];
 
   const coreValues = [
     {
+      num: '01',
       title: 'INTEGRITY',
       tagline: 'Give honest advice and set realistic expectations.',
       desc: 'We diagnose real sales challenges with candor and never sell generic shortcuts.',
       icon: ShieldCheck,
     },
     {
+      num: '02',
       title: 'PERFORMANCE',
       tagline: 'Focus on observable activity, conversion and business outcomes.',
       desc: 'We measure concrete sales metrics: calls, pipeline velocity, conversion and revenue.',
       icon: TrendingUp,
     },
     {
+      num: '03',
       title: 'PRACTICAL LEARNING',
       tagline: 'Train through examples, role-play, feedback and follow-up.',
       desc: 'Hands-on conversation coaching and live objection drills designed for immediate application.',
       icon: BookOpenCheck,
     },
     {
+      num: '04',
       title: 'PARTNERSHIP',
       tagline: 'Work alongside owners and managers, not just deliver one-off sessions.',
       desc: 'We embed ourselves as strategic allies supporting commercial execution.',
       icon: Handshake,
     },
     {
+      num: '05',
       title: 'CONTINUOUS IMPROVEMENT',
       tagline: 'Review data and refine the process over time.',
       desc: 'Constantly evaluating lost deals, pipeline analytics, and market dynamics to sharpen the playbook.',
       icon: RefreshCw,
+    },
+    {
+      num: '06',
+      title: 'ACCOUNTABILITY',
+      tagline: 'Take ownership of agreed responsibilities, actions and measurable progress.',
+      desc: 'Take ownership of agreed responsibilities, actions and measurable progress across the team.',
+      icon: CheckCircle2,
     },
   ];
 
@@ -132,8 +157,79 @@ export default function About() {
         </div>
       </section>
 
+      {/* Large Indian Professional Leader - Text + Image Section with Subtle Gold Frame */}
+      <section className="section section-light about-leadership-section">
+        <div className="container">
+          <div className="about-editorial-grid">
+            {/* Text Column */}
+            <div className="about-editorial-text">
+              <span className="eyebrow eyebrow-dark">
+                <span className="eyebrow-dot" />
+                SALES CONSULTING LEADERSHIP
+              </span>
+              <h2 className="about-editorial-title">
+                Grounded in Real Sales Experience.
+              </h2>
+              <div className="gold-line" />
+              <p className="about-editorial-para">
+                Sales Falcon was established to provide business owners and sales leaders with practical, grounded support. Many organizations struggle not because their products lack merit, but because their sales teams lack structured conversation coaching, pipeline visibility, and consistent execution rhythms.
+              </p>
+              <p className="about-editorial-para">
+                We partner directly with founders and leadership teams to turn unorganized sales efforts into disciplined, high-converting commercial engines built for long-term sustainability.
+              </p>
+
+              <div className="about-pillar-checks">
+                <div className="about-check-item">
+                  <CheckCircle2 size={18} className="gold-text" />
+                  <span>Frontline conversation coaching and objection handling drills</span>
+                </div>
+                <div className="about-check-item">
+                  <CheckCircle2 size={18} className="gold-text" />
+                  <span>Objective pipeline velocity and conversion audits</span>
+                </div>
+                <div className="about-check-item">
+                  <CheckCircle2 size={18} className="gold-text" />
+                  <span>Role profiling and sales team recruitment support</span>
+                </div>
+                <div className="about-check-item">
+                  <CheckCircle2 size={18} className="gold-text" />
+                  <span>Repeatable B2B workflows and CRM accountability systems</span>
+                </div>
+              </div>
+
+              <div className="about-editorial-cta">
+                <Link to="/contact" className="btn btn-navy btn-lg">
+                  <span>Speak With Our Team</span>
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+
+            {/* Image Column - Single Professional Indian Person with subtle gold frame */}
+            <div className="about-editorial-image-wrap">
+              <div className="about-photo-frame">
+                <div className="about-photo-gold-border" />
+                <img
+                  src="/images/about-leader.jpg"
+                  alt="Sales Falcon Senior Sales Consultant and Leadership"
+                  className="about-leader-photo"
+                  loading="lazy"
+                />
+                <div className="about-photo-badge">
+                  <Award size={18} className="gold-text" />
+                  <div className="badge-text-group">
+                    <span className="badge-main">B2B Sales Consulting</span>
+                    <span className="badge-sub">Trust • Experience • Professionalism</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Vision & Mission Cards */}
-      <section className="section section-light">
+      <section className="section section-white">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow eyebrow-dark">
@@ -164,7 +260,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* The Falcon Concept Visual Story */}
+      {/* The Falcon Concept Visual Story - 6 Items */}
       <section className="section section-dark about-falcon-story-section">
         <div className="dark-grid-bg story-bg-grid" />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -198,7 +294,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Core Values Section */}
+      {/* Core Values Section - Exactly 6 Items in 3 x 2 Grid */}
       <section className="section section-white">
         <div className="container">
           <div className="section-header">
@@ -222,7 +318,10 @@ export default function About() {
                     <div className="about-value-icon">
                       <Icon size={22} />
                     </div>
-                    <h3 className="about-value-title">{val.title}</h3>
+                    <div className="about-value-title-wrap">
+                      <span className="about-value-num">{val.num}</span>
+                      <h3 className="about-value-title">{val.title}</h3>
+                    </div>
                   </div>
                   <blockquote className="about-value-tagline">“{val.tagline}”</blockquote>
                   <p className="about-value-desc">{val.desc}</p>

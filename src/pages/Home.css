@@ -60,24 +60,12 @@
   text-transform: uppercase;
 }
 
-/* Home Services Grid */
+/* Home Services Grid - 6 Items (3 x 2 on desktop, 2 x 3 on tablet, 1 on mobile) */
 .home-services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 44px;
-}
-
-@media (min-width: 992px) {
-  .home-services-grid > .home-service-preview-card:nth-child(4) {
-    grid-column: 1 / span 1;
-    margin-left: auto;
-    width: 100%;
-  }
-  .home-services-grid > .home-service-preview-card:nth-child(5) {
-    grid-column: 2 / span 1;
-    width: 100%;
-  }
 }
 
 .home-service-preview-card {
@@ -156,23 +144,12 @@
   color: #B4C0D0 !important;
 }
 
+/* Home Why Grid - 6 Items (Elegant 2 x 3 on desktop, 1 on mobile) */
 .home-why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 48px;
-}
-
-@media (min-width: 992px) {
-  .home-why-grid > .home-why-card:nth-child(4) {
-    grid-column: 1 / span 1;
-    margin-left: auto;
-    width: 100%;
-  }
-  .home-why-grid > .home-why-card:nth-child(5) {
-    grid-column: 2 / span 1;
-    width: 100%;
-  }
 }
 
 .home-why-card {

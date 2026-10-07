@@ -36,6 +36,11 @@ export default function IdealClients() {
       desc: 'Teams requiring streamlined pipelines, CRM discipline, clear KPIs, and reliable reporting.',
       icon: SlidersHorizontal,
     },
+    {
+      title: 'Enterprises Entering New Markets',
+      desc: 'Organizations launching new offerings or territories needing proven playbooks and outbound structure.',
+      icon: Rocket,
+    },
   ];
 
   return (
@@ -54,7 +59,7 @@ export default function IdealClients() {
         </div>
 
         <div className="ideal-clients-grid">
-          {clientTypes.map((client, idx) => {
+          {clientTypes.map((client) => {
             const Icon = client.icon;
             return (
               <div key={client.title} className="client-card">

@@ -21,7 +21,81 @@
   font-size: 1.1rem;
   line-height: 1.65;
   color: var(--color-text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+}
+
+/* Friendly Consultant Portrait Card */
+.contact-consultant-card {
+  margin-bottom: 28px;
+}
+
+.consultant-image-frame {
+  position: relative;
+  border-radius: 16px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(216, 172, 69, 0.4) 0%, rgba(16, 39, 72, 0.08) 60%, rgba(216, 172, 69, 0.25) 100%);
+  box-shadow: 0 16px 36px rgba(16, 39, 72, 0.08);
+}
+
+.consultant-gold-corner {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 60px;
+  height: 60px;
+  border-top: 3px solid #D8AC45;
+  border-right: 3px solid #D8AC45;
+  border-radius: 0 12px 0 0;
+  pointer-events: none;
+}
+
+.consultant-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  display: block;
+}
+
+.consultant-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(16, 39, 72, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 172, 69, 0.4);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.consultant-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 0 8px #25D366;
+  flex-shrink: 0;
+}
+
+.consultant-badge-title {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.consultant-badge-sub {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-gold);
 }
 
 .contact-cards-stack {
@@ -243,6 +317,10 @@
 }
 
 @media (max-width: 640px) {
+  .consultant-img {
+    height: 260px;
+  }
+
   .contact-form-card {
     padding: 30px 20px;
   }

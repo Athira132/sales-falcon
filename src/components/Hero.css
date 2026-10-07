@@ -131,163 +131,183 @@
   color: #C39738;
 }
 
-/* Hero Visual Stage */
+/* Hero Visual Stage with Provided Person Photo */
 .hero-visual {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.visual-stage {
+.hero-person-stage {
   position: relative;
   width: 100%;
-  max-width: 520px;
-  aspect-ratio: 1 / 1;
+  max-width: 500px;
+  height: 560px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
-/* Concentric Precision Rings */
-.orbit-ring {
+/* Ambient Backlight Glow */
+.person-ambient-backdrop {
   position: absolute;
+  width: 440px;
+  height: 440px;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 50%;
-  border: 1px dashed rgba(216, 172, 69, 0.22);
+  background: radial-gradient(circle, rgba(216, 172, 69, 0.24) 0%, rgba(16, 39, 72, 0.08) 55%, transparent 75%);
+  filter: blur(32px);
   pointer-events: none;
+  z-index: 0;
 }
 
-.orbit-ring-1 {
-  width: 95%;
-  height: 95%;
-  animation: rotateClockwise 60s linear infinite;
+/* Subtle Falcon-Inspired Vector Accents */
+.hero-falcon-accents {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.orbit-ring-2 {
-  width: 78%;
-  height: 78%;
-  border-style: solid;
-  border-color: rgba(16, 39, 72, 0.08);
+.growth-trajectory-vector {
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+  animation: trajectoryTrace 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
 }
 
-.orbit-ring-3 {
-  width: 60%;
-  height: 60%;
-  border: 1px dotted rgba(216, 172, 69, 0.35);
-  animation: rotateCounter 45s linear infinite;
+@keyframes trajectoryTrace {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-@keyframes rotateClockwise {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes rotateCounter {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
-}
-
-/* Graphic Card */
-.abstract-graphic-card {
+/* Person Portrait Frame */
+.hero-person-frame {
   position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  border-radius: 24px;
-  background: radial-gradient(circle at 60% 40%, #FFFFFF 0%, #F5F7FA 100%);
-  border: 1px solid rgba(216, 172, 69, 0.28);
-  box-shadow: 0 20px 50px rgba(16, 39, 72, 0.1);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 24px;
 }
 
-.falcon-vector-canvas {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 12px 28px rgba(16, 39, 72, 0.12));
+.hero-person-photo {
+  height: 98%;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 16px 36px rgba(16, 39, 72, 0.16));
+  transition: transform 0.4s ease;
 }
 
-.trajectory-path {
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  animation: trajectoryTrace 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+.hero-person-photo:hover {
+  transform: scale(1.02);
 }
 
-/* Floating Badges */
-.floating-metric-badge {
+.person-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, var(--color-bg-light) 0%, rgba(247, 248, 250, 0) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Floating Micro-Graphic Cards */
+.hero-floating-card {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 12px 18px;
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  border: 1px solid rgba(216, 172, 69, 0.3);
-  box-shadow: 0 10px 30px rgba(16, 39, 72, 0.12);
-  backdrop-filter: blur(10px);
-  z-index: 10;
+  border-radius: 14px;
+  border: 1px solid rgba(216, 172, 69, 0.32);
+  box-shadow: 0 12px 32px rgba(16, 39, 72, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  z-index: 5;
   animation: floatSlow 6s ease-in-out infinite;
   white-space: nowrap;
 }
 
-.badge-top-right {
-  top: 10%;
-  right: -5%;
+.card-top-left {
+  top: 14%;
+  left: -6%;
   animation-delay: 0s;
 }
 
-.badge-bottom-left {
-  bottom: 8%;
-  left: -5%;
-  animation-delay: 1.5s;
+.card-top-right {
+  top: 24%;
+  right: -8%;
+  animation-delay: 1.8s;
 }
 
-.badge-middle-right {
-  bottom: 30%;
-  right: -10%;
-  animation-delay: 3s;
+.card-bottom-center {
+  bottom: 6%;
+  left: -4%;
+  animation-delay: 3.2s;
 }
 
-.badge-icon-wrap {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+.floating-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.badge-icon-wrap.gold-wrap {
-  background: rgba(216, 172, 69, 0.15);
+.floating-card-icon.icon-gold {
+  background: rgba(216, 172, 69, 0.16);
   color: #B58B2E;
 }
 
-.badge-icon-wrap.navy-wrap {
+.floating-card-icon.icon-navy {
   background: var(--color-navy);
   color: var(--color-gold);
 }
 
-.badge-icon-wrap.subtle-wrap {
+.floating-card-icon.icon-white {
   background: #F0F4FA;
+  border: 1px solid rgba(16, 39, 72, 0.08);
   color: var(--color-navy);
 }
 
-.badge-content {
+.floating-card-body {
   display: flex;
   flex-direction: column;
 }
 
-.badge-title {
-  font-size: 0.85rem;
+.card-headline {
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-navy);
+  letter-spacing: -0.01em;
 }
 
-.badge-sub {
+.card-subheadline {
   font-size: 0.72rem;
   color: var(--color-text-secondary);
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* Responsive adjustments */
@@ -318,28 +338,29 @@
     justify-content: center;
   }
 
-  .visual-stage {
+  .hero-person-stage {
     max-width: 440px;
+    height: 500px;
     margin: 0 auto;
   }
 
-  .badge-top-right {
-    right: 0%;
+  .card-top-left {
+    left: -2%;
   }
 
-  .badge-bottom-left {
-    left: 0%;
+  .card-top-right {
+    right: -2%;
   }
 
-  .badge-middle-right {
+  .card-bottom-center {
     display: none;
   }
 }
 
 @media (max-width: 640px) {
   .hero-section {
-    padding-top: calc(var(--header-height) + 20px);
-    padding-bottom: 50px;
+    padding-top: calc(var(--header-height) + 16px);
+    padding-bottom: 48px;
   }
 
   .hero-ctas {
@@ -359,27 +380,34 @@
     padding: 10px 14px;
   }
 
-  .visual-stage {
+  .hero-person-stage {
     max-width: 320px;
+    height: 420px;
   }
 
-  .badge-top-right {
-    top: -5%;
-    right: -2%;
+  .card-top-left {
+    top: 6%;
+    left: -4%;
     padding: 8px 12px;
   }
 
-  .badge-bottom-left {
-    bottom: -5%;
-    left: -2%;
+  .card-top-right {
+    top: auto;
+    bottom: 8%;
+    right: -4%;
     padding: 8px 12px;
   }
 
-  .badge-title {
+  .floating-card-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-headline {
     font-size: 0.75rem;
   }
 
-  .badge-sub {
+  .card-subheadline {
     font-size: 0.65rem;
   }
 }

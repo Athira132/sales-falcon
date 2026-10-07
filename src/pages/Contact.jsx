@@ -5,8 +5,7 @@ import {
   Send, 
   Clock, 
   ShieldCheck, 
-  CheckCircle2, 
-  AlertCircle 
+  CheckCircle2 
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import './Contact.css';
@@ -111,8 +110,28 @@ export default function Contact() {
               <h2 className="contact-channels-heading">Speak Directly With Us</h2>
               <div className="gold-line" />
               <p className="contact-channels-desc">
-                We prefer direct, practical conversations. Reach out through our dedicated phone line or instant WhatsApp channel.
+                We prefer direct, practical conversations. Reach out through our dedicated phone line or instant WhatsApp channel to discuss your sales goals.
               </p>
+
+              {/* Friendly Indian Consultant Portrait */}
+              <div className="contact-consultant-card">
+                <div className="consultant-image-frame">
+                  <div className="consultant-gold-corner" />
+                  <img
+                    src="/images/contact-consultant.jpg"
+                    alt="Sales Falcon client consultation advisor"
+                    className="consultant-img"
+                    loading="lazy"
+                  />
+                  <div className="consultant-badge">
+                    <span className="consultant-status-dot" />
+                    <div>
+                      <span className="consultant-badge-title">Direct Sales Advisory</span>
+                      <span className="consultant-badge-sub">Ready to discuss your pipeline</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div className="contact-cards-stack">
                 <a href="tel:9633199772" className="contact-big-card">
@@ -144,11 +163,11 @@ export default function Contact() {
               <div className="contact-commitments">
                 <div className="commitment-item">
                   <Clock size={18} className="gold-text" />
-                  <span>Direct founder & consulting team response within 1 business day</span>
+                  <span>Direct consulting response within 1 business day</span>
                 </div>
                 <div className="commitment-item">
                   <ShieldCheck size={18} className="gold-text" />
-                  <span>Strict commercial non-disclosure and privacy guaranteed</span>
+                  <span>Strict commercial non-disclosure and confidentiality guaranteed</span>
                 </div>
               </div>
             </div>

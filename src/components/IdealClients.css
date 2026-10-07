@@ -10,18 +10,6 @@
   gap: 28px;
 }
 
-@media (min-width: 992px) {
-  .ideal-clients-grid > .client-card:nth-child(4) {
-    grid-column: 1 / span 1;
-    margin-left: auto;
-    width: 100%;
-  }
-  .ideal-clients-grid > .client-card:nth-child(5) {
-    grid-column: 2 / span 1;
-    width: 100%;
-  }
-}
-
 .client-card {
   position: relative;
   background: #FFFFFF;

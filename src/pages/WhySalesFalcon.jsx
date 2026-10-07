@@ -6,11 +6,12 @@ import {
   Gauge, 
   BriefcaseBusiness, 
   Infinity as InfinityIcon, 
-  CheckCircle2, 
-  Eye, 
-  Zap, 
   TrendingUp, 
+  Eye, 
   Compass, 
+  Zap, 
+  ShieldCheck,
+  CheckCircle2, 
   ArrowRight,
   MessageSquare
 } from 'lucide-react';
@@ -21,38 +22,45 @@ import './WhySalesFalcon.css';
 export default function WhySalesFalcon() {
   const differentiators = [
     {
-      title: 'PRACTICAL, NOT THEORETICAL',
-      subtitle: 'Real Conversations, Not Generic Slideware',
+      num: '01',
+      title: 'Practical, Not Theoretical',
       lead: 'Training and consulting built around real sales situations.',
       desc: 'Most sales training is forgotten 48 hours after delivery because it relies on textbook theory. We train directly on your real buyer objections, your actual customer personas, and your live commercial conversations.',
       icon: Target,
     },
     {
-      title: 'PEOPLE + PROCESS',
-      subtitle: 'The Symbiosis of Talent & System',
+      num: '02',
+      title: 'People + Process',
       lead: 'We focus on both the salesperson and the system supporting them.',
       desc: 'Top talent trapped inside a disorganized pipeline will inevitably burn out or underperform. Conversely, rigid CRM tools without confident, trained salespeople fail. We strengthen the individual salesperson and the underlying system in tandem.',
       icon: GitMerge,
     },
     {
-      title: 'MEASURABLE PERFORMANCE',
-      subtitle: 'Observable Pipeline Economics',
+      num: '03',
+      title: 'Measurable Performance',
       lead: 'Focus on observable activity, conversion, follow-up and outcomes.',
       desc: 'We replace subjective feelings with clear operational metrics: outbound cadence rigor, stage conversion percentages, proposal velocity, and deal closure ratios. Every improvement is visible and verifiable.',
       icon: Gauge,
     },
     {
-      title: 'BUSINESS-FIRST THINKING',
-      subtitle: 'Tailored Commercial Architecture',
+      num: '04',
+      title: 'Business-First Thinking',
       lead: "Solutions are designed around the organization's actual goals.",
       desc: 'Your sales motion must mirror your margins, customer acquisition cost limits, and cash flow cycle. We build workflows that serve your bottom-line profitability, not generic templates borrowed from unrelated industries.',
       icon: BriefcaseBusiness,
     },
     {
-      title: 'LONG-TERM PARTNERSHIP',
-      subtitle: 'Sustained Commercial Capability',
-      lead: 'The goal is sustainable improvement, not a one-day intervention.',
-      desc: 'True behavioral change takes continuous reinforcement. We partner with business founders and sales managers to monitor execution, refine battlecards, and build an enduring high-performance culture.',
+      num: '05',
+      title: 'Continuous Improvement',
+      lead: 'Review performance, learn from results and refine the approach.',
+      desc: 'Markets evolve, buyer expectations shift, and sales teams grow. We institute ongoing feedback loops, pipeline reviews, and deal post-mortems so your sales methodology continuously adapts and sharpens.',
+      icon: TrendingUp,
+    },
+    {
+      num: '06',
+      title: 'Long-Term Partnership',
+      lead: 'Work alongside businesses to support sustainable sales improvement.',
+      desc: 'True behavioral change takes continuous reinforcement. We work alongside business founders and sales leaders to monitor execution, refine battlecards, and build an enduring high-performance culture.',
       icon: InfinityIcon,
     },
   ];
@@ -85,8 +93,14 @@ export default function WhySalesFalcon() {
     {
       name: 'Performance',
       sub: 'Upward Trajectory',
-      text: 'The upward arrow represents continuous business growth and measurable conversion gains.',
+      text: 'Continuous commercial growth, healthy conversion rates, and measurable sales output.',
       icon: TrendingUp,
+    },
+    {
+      name: 'Accountability',
+      sub: 'Execution Rigor',
+      text: 'Consistent ownership of agreed activity targets, pipeline hygiene, and deal progression.',
+      icon: ShieldCheck,
     },
   ];
 
@@ -119,36 +133,95 @@ export default function WhySalesFalcon() {
         </div>
       </section>
 
-      {/* 5 Core Pillars Detailed Stack */}
-      <section className="section section-white">
+      {/* Leadership Editorial Section with Single Indian Leader Photo */}
+      <section className="section section-white why-leader-section">
+        <div className="container">
+          <div className="why-leader-grid">
+            <div className="why-leader-text">
+              <span className="eyebrow eyebrow-dark">
+                <span className="eyebrow-dot" />
+                COMMERCIAL LEADERSHIP
+              </span>
+              <h2 className="why-leader-title">
+                Sales Success Is Built on Conviction, Structure, and Relentless Discipline.
+              </h2>
+              <div className="gold-line" />
+              <p className="why-leader-lead">
+                Most sales challenges are not motivational—they are structural. When leadership aligns the right salespeople with defined processes, predictability follows.
+              </p>
+              <p className="why-leader-body">
+                At Sales Falcon, we work directly at the intersection of leadership vision and front-line sales execution. Whether mentoring sales leaders, coaching account executives through high-stakes deals, or engineering multi-stage pipelines, our focus remains singular: creating high-performing, self-sustaining sales teams.
+              </p>
+
+              <div className="why-leader-highlights">
+                <div className="why-leader-highlight-item">
+                  <div className="why-highlight-check"><CheckCircle2 size={16} /></div>
+                  <div>
+                    <strong>Strategic Alignment</strong>
+                    <p>Connecting board-level revenue objectives directly to daily sales reps' activities.</p>
+                  </div>
+                </div>
+                <div className="why-leader-highlight-item">
+                  <div className="why-highlight-check"><CheckCircle2 size={16} /></div>
+                  <div>
+                    <strong>Sustainable Capability</strong>
+                    <p>Building internal sales rigor so your organization grows without external dependency.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="why-leader-visual">
+              <div className="why-leader-image-frame">
+                <div className="why-leader-gold-accent" />
+                <img
+                  src="/images/why-leader.jpg"
+                  alt="Sales Falcon commercial leadership and executive sales consulting"
+                  className="why-leader-img"
+                  loading="lazy"
+                />
+                <div className="why-leader-badge">
+                  <span className="badge-icon"><TrendingUp size={16} /></span>
+                  <div className="badge-text">
+                    <span className="badge-label">Executive Leadership</span>
+                    <span className="badge-val">Vision • Focus • Performance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Exactly 6 Differentiators in 2x3 Grid */}
+      <section className="section section-light">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow eyebrow-dark">
               <span className="eyebrow-dot" />
-              OUR 5 CORE PILLARS
+              OUR 6 CORE REASONS
             </span>
-            <h2 className="section-title">What Makes Our Approach Different</h2>
+            <h2 className="section-title">Why Sales Falcon</h2>
             <div className="gold-line gold-line-center" />
+            <p className="section-subtitle">
+              Six foundational principles that define how we work, how we consult, and how we deliver measurable commercial value.
+            </p>
           </div>
 
-          <div className="why-pillars-stack">
-            {differentiators.map((pillar, idx) => {
+          <div className="why-reasons-grid">
+            {differentiators.map((pillar) => {
               const Icon = pillar.icon;
               return (
-                <div key={pillar.title} className="why-pillar-card">
-                  <div className="pillar-header-row">
-                    <span className="pillar-counter">0{idx + 1}</span>
-                    <div className="pillar-headings">
-                      <span className="pillar-sub-label">{pillar.subtitle}</span>
-                      <h3 className="pillar-main-title">{pillar.title}</h3>
-                    </div>
-                    <div className="pillar-icon-box">
-                      <Icon size={24} />
+                <div key={pillar.title} className="why-reason-card">
+                  <div className="reason-card-header">
+                    <span className="reason-card-num">{pillar.num}</span>
+                    <div className="reason-icon-box">
+                      <Icon size={22} />
                     </div>
                   </div>
-
-                  <p className="pillar-lead-statement">{pillar.lead}</p>
-                  <p className="pillar-body-text">{pillar.desc}</p>
+                  <h3 className="reason-card-title">{pillar.title}</h3>
+                  <p className="reason-card-lead">{pillar.lead}</p>
+                  <p className="reason-card-desc">{pillar.desc}</p>
                 </div>
               );
             })}
@@ -156,7 +229,7 @@ export default function WhySalesFalcon() {
         </div>
       </section>
 
-      {/* THE FALCON MINDSET - Strong Visual Section */}
+      {/* THE FALCON MINDSET - 6 Items in 3x2 Grid */}
       <section className="section section-dark falcon-mindset-section">
         <div className="dark-grid-bg story-bg-grid" />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -172,7 +245,6 @@ export default function WhySalesFalcon() {
             </p>
           </div>
 
-          {/* Geometric Falcon Concept Graphic */}
           <div className="mindset-visual-wrapper">
             <div className="mindset-cards-grid">
               {falconMindset.map((item) => {
@@ -193,7 +265,7 @@ export default function WhySalesFalcon() {
         </div>
       </section>
 
-      {/* Ideal Clients Component */}
+      {/* Ideal Clients Component - 6 items */}
       <IdealClients />
 
       {/* Final Action CTA */}

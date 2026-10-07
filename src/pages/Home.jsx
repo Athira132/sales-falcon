@@ -9,11 +9,7 @@ import {
   Users, 
   Settings, 
   Share2, 
-  ShieldCheck, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  CheckCircle2 
+  Zap 
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Hero from '../components/Hero';
@@ -51,14 +47,45 @@ export default function Home() {
       icon: Share2,
       summary: 'Lead generation planning, lead quality reviews, campaign feedback and conversion optimization.',
     },
+    {
+      num: '06',
+      title: 'Sales Performance Management',
+      icon: Zap,
+      summary: 'Track sales activity, follow-up, conversion, pipeline performance and key indicators to help businesses identify gaps and improve sales execution.',
+    },
   ];
 
   const whyHighlights = [
-    { title: 'Practical, Not Theoretical', desc: 'Training and consulting built around real sales situations.' },
-    { title: 'People + Process', desc: 'We focus on both the salesperson and the system supporting them.' },
-    { title: 'Measurable Performance', desc: 'Activity, conversion, follow-up and outcomes matter.' },
-    { title: 'Business-First Thinking', desc: "Solutions designed around your organization's actual commercial goals." },
-    { title: 'Long-Term Partnership', desc: 'Sustainable improvement, not a one-day intervention.' },
+    {
+      num: '01',
+      title: 'Practical, Not Theoretical',
+      desc: 'Training and consulting built around real sales situations.',
+    },
+    {
+      num: '02',
+      title: 'People + Process',
+      desc: 'We focus on both the salesperson and the system supporting them.',
+    },
+    {
+      num: '03',
+      title: 'Measurable Performance',
+      desc: 'Focus on observable activity, conversion, follow-up and outcomes.',
+    },
+    {
+      num: '04',
+      title: 'Business-First Thinking',
+      desc: "Solutions are designed around the organization's actual goals.",
+    },
+    {
+      num: '05',
+      title: 'Continuous Improvement',
+      desc: 'Review performance, learn from results and refine the approach.',
+    },
+    {
+      num: '06',
+      title: 'Long-Term Partnership',
+      desc: 'Work alongside businesses to support sustainable sales improvement.',
+    },
   ];
 
   return (
@@ -108,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. 5-Service Overview Section */}
+      {/* 3. 6-Service Overview Section */}
       <section className="section section-light home-services-section">
         <div className="container">
           <div className="section-header">
@@ -116,7 +143,7 @@ export default function Home() {
               <span className="eyebrow-dot" />
               WHAT WE DO
             </span>
-            <h2 className="section-title">5 Ways We Strengthen Sales</h2>
+            <h2 className="section-title">6 Ways We Strengthen Sales</h2>
             <div className="gold-line gold-line-center" />
             <p className="section-subtitle">
               Targeted solutions covering team recruitment, skill building, operational workflows, and pipeline conversion.
@@ -167,9 +194,9 @@ export default function Home() {
           </div>
 
           <div className="home-why-grid">
-            {whyHighlights.map((item, idx) => (
+            {whyHighlights.map((item) => (
               <div key={item.title} className="home-why-card">
-                <span className="home-why-num">0{idx + 1}</span>
+                <span className="home-why-num">{item.num}</span>
                 <h3 className="home-why-title">{item.title}</h3>
                 <p className="home-why-desc">{item.desc}</p>
               </div>

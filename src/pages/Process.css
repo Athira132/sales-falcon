@@ -1,175 +1,284 @@
 /* Dedicated Process Page Styles */
-.process-flow-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 900px;
-  margin: 0 auto;
-}
 
-.process-flow-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 28px;
+/* 1. Process Editorial Section with Single Indian Business Strategist Photo */
+.process-intro-section {
   position: relative;
+  overflow: hidden;
 }
 
-.flow-number-col {
+.process-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.process-editorial-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-  width: 64px;
 }
 
-.flow-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--color-navy);
-  border: 2px solid var(--color-gold);
-  color: #FFFFFF;
+.process-editorial-title {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.22;
+  margin-bottom: 16px;
+}
+
+.process-editorial-para {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.process-bullet-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.process-bullet-item {
   display: flex;
   align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.process-editorial-image-wrap {
+  position: relative;
+  display: flex;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(16, 39, 72, 0.15);
+}
+
+.process-photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.process-photo-gold-border {
+  position: absolute;
+  inset: -12px -12px -12px -12px;
+  border: 1.5px solid rgba(216, 172, 69, 0.45);
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.process-photo-gold-border::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 24px;
+  height: 24px;
+  border-top: 3px solid var(--color-gold);
+  border-right: 3px solid var(--color-gold);
+  border-top-right-radius: 12px;
+}
+
+.process-photo-gold-border::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 3px solid var(--color-gold);
+  border-left: 3px solid var(--color-gold);
+  border-bottom-left-radius: 12px;
+}
+
+.process-strategist-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(16, 39, 72, 0.12);
+  display: block;
   position: relative;
   z-index: 2;
-  transition: all var(--transition-normal);
 }
 
-.process-flow-item:hover .flow-circle {
-  transform: scale(1.06);
-  box-shadow: 0 12px 28px rgba(216, 172, 69, 0.35);
+.process-photo-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(16, 39, 72, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(216, 172, 69, 0.35);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
-.flow-num {
-  font-size: 1.15rem;
+.badge-kicker {
+  font-size: 0.85rem;
   font-weight: 800;
+  color: #FFFFFF;
+}
+
+.badge-caption {
+  font-size: 0.72rem;
   color: var(--color-gold);
-  letter-spacing: 0.05em;
-  font-variant-numeric: tabular-nums;
 }
 
-.flow-line-connector {
-  width: 2px;
-  flex-grow: 1;
-  min-height: 80px;
-  background: linear-gradient(180deg, var(--color-gold) 0%, rgba(16, 39, 72, 0.15) 100%);
-  margin: 8px 0;
+/* 2. Visual Timeline: Desktop Horizontal 6-Step Process, Mobile Vertical */
+.process-timeline-section {
+  position: relative;
+  overflow: hidden;
 }
 
-.flow-card {
+.timeline-horizontal-container {
+  position: relative;
+  margin-top: 24px;
+}
+
+.timeline-progress-rail {
+  position: absolute;
+  top: 36px;
+  left: 40px;
+  right: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #102748 0%, #D8AC45 50%, #102748 100%);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.process-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-step-card {
   background: #F7F8FA;
   border: 1px solid var(--color-border-light);
-  border-radius: 16px;
-  padding: 36px 32px;
-  flex-grow: 1;
+  border-radius: 14px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
   transition: all var(--transition-normal);
+  position: relative;
 }
 
-.process-flow-item:hover .flow-card {
+.timeline-step-card:hover {
   background: #FFFFFF;
-  border-color: rgba(216, 172, 69, 0.4);
-  box-shadow: 0 14px 36px rgba(16, 39, 72, 0.08);
-  transform: translateX(4px);
+  border-color: rgba(216, 172, 69, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px rgba(16, 39, 72, 0.08);
 }
 
-.flow-card-header {
+.step-node-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
-.flow-card-title-group {
+.step-circle-node {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
   display: flex;
-  flex-direction: column;
-}
-
-.flow-tagline {
-  font-size: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #C39738;
-  text-transform: uppercase;
-  margin-bottom: 2px;
+  box-shadow: 0 4px 12px rgba(16, 39, 72, 0.15);
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
 }
 
-.flow-title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--color-navy);
-  margin: 0;
+.timeline-step-card:hover .step-circle-node {
+  transform: scale(1.08);
+  background: #0A1B33;
 }
 
-.flow-icon-box {
-  width: 46px;
-  height: 46px;
-  border-radius: 10px;
-  background: #FFFFFF;
-  border: 1px solid var(--color-border-light);
-  color: var(--color-navy);
+.step-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(216, 172, 69, 0.12);
+  color: #B58B2E;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.process-flow-item:hover .flow-icon-box {
-  background: var(--color-navy);
-  color: var(--color-gold);
+.step-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.flow-lead-desc {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--color-navy);
-  margin-bottom: 18px;
-}
-
-.flow-breakdown {
-  background: #FFFFFF;
-  border: 1px solid rgba(16, 39, 72, 0.06);
-  border-radius: 10px;
-  padding: 18px 20px;
-}
-
-.process-flow-item:hover .flow-breakdown {
-  background: var(--color-bg-light);
-}
-
-.breakdown-label {
-  display: block;
-  font-size: 0.75rem;
+.step-tagline {
+  font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-navy);
-  margin-bottom: 10px;
+  color: #C39738;
+  margin-bottom: 2px;
 }
 
-.breakdown-list {
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin-bottom: 14px;
+  min-height: 48px;
+}
+
+.step-details-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16, 39, 72, 0.06);
+  margin-top: auto;
 }
 
-.breakdown-list li {
+.step-details-list li {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-navy);
+  font-weight: 600;
 }
 
-.flow-check {
+.step-check {
   color: #C39738;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
-/* HOW WE WORK */
+/* 3. HOW WE WORK Section - 6 Items (3 x 2 grid) */
 .how-we-work-section {
   position: relative;
   overflow: hidden;
@@ -181,23 +290,11 @@
   gap: 24px;
 }
 
-@media (min-width: 992px) {
-  .how-work-grid > .how-work-card:nth-child(4) {
-    grid-column: 1 / span 1;
-    margin-left: auto;
-    width: 100%;
-  }
-  .how-work-grid > .how-work-card:nth-child(5) {
-    grid-column: 2 / span 1;
-    width: 100%;
-  }
-}
-
 .how-work-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
-  padding: 30px 24px;
+  padding: 28px 24px;
   backdrop-filter: blur(8px);
   transition: all var(--transition-normal);
 }
@@ -208,9 +305,23 @@
   transform: translateY(-4px);
 }
 
+.how-work-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.how-work-num {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+}
+
 .how-work-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
   background: rgba(216, 172, 69, 0.15);
   color: var(--color-gold);
@@ -218,7 +329,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
 }
 
 .how-work-title {
@@ -235,7 +345,7 @@
   margin: 0;
 }
 
-/* Process Bottom CTA */
+/* 4. Process Bottom CTA */
 .process-bottom-cta {
   background: #F7F8FA;
   border: 1px solid var(--color-border-light);
@@ -267,32 +377,42 @@
   flex-wrap: wrap;
 }
 
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .process-timeline-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .timeline-progress-rail {
+    display: none;
+  }
+
+  .step-desc {
+    min-height: auto;
+  }
+}
+
 @media (max-width: 991px) {
+  .process-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .how-work-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .process-flow-item {
+  /* Mobile Vertical Timeline */
+  .process-timeline-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
-  }
-
-  .flow-number-col {
-    width: 48px;
-  }
-
-  .flow-circle {
-    width: 48px;
-    height: 48px;
-  }
-
-  .flow-num {
-    font-size: 0.95rem;
-  }
-
-  .flow-card {
-    padding: 24px 18px;
   }
 
   .how-work-grid {

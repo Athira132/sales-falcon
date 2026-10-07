@@ -6,15 +6,14 @@ import {
   Clock, 
   Repeat, 
   TrendingUp, 
-  Eye, 
-  Info,
-  CheckCircle2
+  Info
 } from 'lucide-react';
 import './PerformanceSystems.css';
 
 export default function PerformanceSystems() {
   const dashboardCards = [
     {
+      num: '01',
       id: 'leads',
       title: 'Qualified Leads',
       category: 'Lead Qualification',
@@ -27,6 +26,7 @@ export default function PerformanceSystems() {
       },
     },
     {
+      num: '02',
       id: 'pipeline',
       title: 'Sales Pipeline',
       category: 'Stage Velocity',
@@ -39,8 +39,9 @@ export default function PerformanceSystems() {
       },
     },
     {
+      num: '03',
       id: 'conversion',
-      title: 'Conversion Rate',
+      title: 'Conversion',
       category: 'Stage Transitions',
       icon: Percent,
       concept: 'Measuring conversion at each step to systematically remove deal drop-offs',
@@ -50,6 +51,7 @@ export default function PerformanceSystems() {
       },
     },
     {
+      num: '04',
       id: 'followups',
       title: 'Follow-ups',
       category: 'Cadence Rigor',
@@ -61,6 +63,7 @@ export default function PerformanceSystems() {
       },
     },
     {
+      num: '05',
       id: 'retention',
       title: 'Client Retention',
       category: 'Account Health',
@@ -72,11 +75,12 @@ export default function PerformanceSystems() {
       },
     },
     {
-      id: 'revenue',
-      title: 'Revenue Performance',
-      category: 'Forecast Predictability',
+      num: '06',
+      id: 'performance',
+      title: 'Sales Performance',
+      category: 'Execution Indicators',
       icon: TrendingUp,
-      concept: 'Predictable quarterly forecasting built on observable pipeline math',
+      concept: 'Pipeline health, activity momentum and execution indicators across the team',
       metricVisual: {
         type: 'trend',
         label: 'Predictable Growth Curve',
