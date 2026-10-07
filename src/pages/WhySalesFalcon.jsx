@@ -10,8 +10,7 @@ import {
   Eye, 
   Compass, 
   Zap, 
-  ShieldCheck,
-  CheckCircle2, 
+  ShieldCheck, 
   ArrowRight,
   MessageSquare
 } from 'lucide-react';
@@ -112,81 +111,43 @@ export default function WhySalesFalcon() {
         canonicalPath="/why-sales-falcon"
       />
 
-      {/* Hero Section */}
+      {/* Hero Section with Integrated Business Leader Image */}
       <section className="page-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <span className="eyebrow eyebrow-dark">
-              <span className="eyebrow-dot" />
-              THE SALES FALCON ADVANTAGE
-            </span>
-            <h1 className="page-hero-title">
-              Powering People.<br />
-              Strengthening Systems.<br />
-              Improving Performance.
-            </h1>
-            <div className="gold-line" />
-            <p className="page-hero-subtitle">
-              We are not motivational speakers or detached theorists. We are commercial growth partners who engineer high-converting sales teams and scalable systems.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Editorial Section with Single Indian Leader Photo */}
-      <section className="section section-white why-leader-section">
-        <div className="container">
-          <div className="why-leader-grid">
-            <div className="why-leader-text">
+          <div className="page-hero-grid">
+            <div className="page-hero-content">
               <span className="eyebrow eyebrow-dark">
                 <span className="eyebrow-dot" />
-                COMMERCIAL LEADERSHIP
+                THE SALES FALCON ADVANTAGE
               </span>
-              <h2 className="why-leader-title">
-                Sales Success Is Built on Conviction, Structure, and Relentless Discipline.
-              </h2>
+              <h1 className="page-hero-title">
+                Powering People.<br />
+                Strengthening Systems.<br />
+                Improving Performance.
+              </h1>
               <div className="gold-line" />
-              <p className="why-leader-lead">
-                Most sales challenges are not motivational—they are structural. When leadership aligns the right salespeople with defined processes, predictability follows.
+              <p className="page-hero-subtitle">
+                We are not motivational speakers or detached theorists. We are commercial growth partners who engineer high-converting sales teams and scalable systems.
               </p>
-              <p className="why-leader-body">
-                At Sales Falcon, we work directly at the intersection of leadership vision and front-line sales execution. Whether mentoring sales leaders, coaching account executives through high-stakes deals, or engineering multi-stage pipelines, our focus remains singular: creating high-performing, self-sustaining sales teams.
-              </p>
-
-              <div className="why-leader-highlights">
-                <div className="why-leader-highlight-item">
-                  <div className="why-highlight-check"><CheckCircle2 size={16} /></div>
-                  <div>
-                    <strong>Strategic Alignment</strong>
-                    <p>Connecting board-level revenue objectives directly to daily sales reps' activities.</p>
-                  </div>
-                </div>
-                <div className="why-leader-highlight-item">
-                  <div className="why-highlight-check"><CheckCircle2 size={16} /></div>
-                  <div>
-                    <strong>Sustainable Capability</strong>
-                    <p>Building internal sales rigor so your organization grows without external dependency.</p>
-                  </div>
-                </div>
+              <div className="hero-ctas" style={{ marginTop: '28px', marginBottom: 0 }}>
+                <Link to="/contact" className="btn btn-gold btn-lg">
+                  <span>Talk to Us</span>
+                  <ArrowRight size={18} />
+                </Link>
+                <a href="#why-reasons" className="btn btn-outline-navy btn-lg">
+                  <span>Explore 6 Reasons</span>
+                </a>
               </div>
             </div>
 
-            <div className="why-leader-visual">
-              <div className="why-leader-image-frame">
-                <div className="why-leader-gold-accent" />
+            <div className="page-hero-visual">
+              <div className="page-hero-photo-frame">
+                <div className="page-hero-gold-accent" />
                 <img
                   src="/images/why-leader.jpg"
-                  alt="Sales Falcon commercial leadership and executive sales consulting"
-                  className="why-leader-img"
-                  loading="lazy"
+                  alt="Sales Falcon Commercial Leadership and Sales Growth"
+                  className="page-hero-photo"
                 />
-                <div className="why-leader-badge">
-                  <span className="badge-icon"><TrendingUp size={16} /></span>
-                  <div className="badge-text">
-                    <span className="badge-label">Executive Leadership</span>
-                    <span className="badge-val">Vision • Focus • Performance</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -194,7 +155,7 @@ export default function WhySalesFalcon() {
       </section>
 
       {/* Exactly 6 Differentiators in 2x3 Grid */}
-      <section className="section section-light">
+      <section id="why-reasons" className="section section-light">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow eyebrow-dark">

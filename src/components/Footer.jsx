@@ -49,12 +49,12 @@ export default function Footer() {
 
           {/* Navigation Links Column */}
           <div className="footer-nav-col">
-            <h4 className="footer-col-title">Navigation</h4>
+            <h4 className="footer-col-title">Quick Links</h4>
             <ul className="footer-menu">
               {navLinks.map((link) => (
                 <li key={link.path} className="footer-menu-item">
                   <Link to={link.path} className="footer-menu-link">
-                    <ChevronRight size={14} className="gold-text" />
+                    <ChevronRight size={14} className="footer-link-chevron" />
                     <span>{link.name}</span>
                   </Link>
                 </li>
@@ -64,9 +64,9 @@ export default function Footer() {
 
           {/* Contact Details Column */}
           <div className="footer-contact-col">
-            <h4 className="footer-col-title">Direct Inquiries</h4>
+            <h4 className="footer-col-title">Contact</h4>
             <p className="footer-contact-intro">
-              Speak directly with our team to discuss your sales objectives.
+              Direct consultation and sales inquiries:
             </p>
 
             <div className="footer-contact-links">
@@ -75,7 +75,7 @@ export default function Footer() {
                   <Phone size={16} />
                 </div>
                 <div>
-                  <span className="footer-contact-type">Call Us</span>
+                  <span className="footer-contact-type">Call Directly</span>
                   <span className="footer-contact-value">96331 99772</span>
                 </div>
               </a>
@@ -84,14 +84,14 @@ export default function Footer() {
                 href="https://wa.me/919633199772"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="footer-contact-item whatsapp-hover"
+                className="footer-contact-item whatsapp-item"
               >
                 <div className="footer-contact-icon whatsapp-icon">
                   <MessageSquare size={16} />
                 </div>
                 <div>
-                  <span className="footer-contact-type">WhatsApp</span>
-                  <span className="footer-contact-value">96331 99772</span>
+                  <span className="footer-contact-type">Instant Chat</span>
+                  <span className="footer-contact-value">WhatsApp</span>
                 </div>
               </a>
             </div>

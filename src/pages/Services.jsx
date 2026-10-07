@@ -123,76 +123,39 @@ export default function Services() {
         canonicalPath="/services"
       />
 
-      {/* Hero Section */}
+      {/* Hero Section with Integrated Sales Professional Image */}
       <section className="page-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <span className="eyebrow eyebrow-dark">
-              <span className="eyebrow-dot" />
-              OUR SERVICES
-            </span>
-            <h1 className="page-hero-title">Build Better Sales.<br />Build Better Systems.</h1>
-            <div className="gold-line" />
-            <p className="page-hero-subtitle">
-              Comprehensive B2B commercial growth solutions engineered to turn sales friction into repeatable conversion.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Single Indian Sales Professional Image Integrated with Service Introduction */}
-      <section className="section section-light service-intro-section">
-        <div className="container">
-          <div className="service-intro-grid">
-            <div className="service-intro-image-wrap">
-              <div className="service-photo-frame">
-                <div className="service-photo-gold-border" />
-                <img
-                  src="/images/services-trainer.jpg"
-                  alt="Indian Sales Consultant and Trainer Explaining Sales Strategy"
-                  className="service-trainer-photo"
-                  loading="lazy"
-                />
-                <div className="service-photo-tag">
-                  <span className="service-tag-title">Strategic Sales Consulting</span>
-                  <span className="service-tag-sub">Training • Strategy • Business Growth</span>
-                </div>
+          <div className="page-hero-grid">
+            <div className="page-hero-content">
+              <span className="eyebrow eyebrow-dark">
+                <span className="eyebrow-dot" />
+                OUR SERVICES
+              </span>
+              <h1 className="page-hero-title">Build Better Sales.<br />Build Better Systems.</h1>
+              <div className="gold-line" />
+              <p className="page-hero-subtitle">
+                Comprehensive B2B commercial growth solutions engineered to turn sales friction into repeatable conversion, predictable pipelines, and sustained performance.
+              </p>
+              <div className="hero-ctas" style={{ marginTop: '28px', marginBottom: 0 }}>
+                <Link to="/contact" className="btn btn-gold btn-lg">
+                  <span>Talk to Us</span>
+                  <ArrowRight size={18} />
+                </Link>
+                <a href="#services-list" className="btn btn-outline-navy btn-lg">
+                  <span>View 6 Services</span>
+                </a>
               </div>
             </div>
 
-            <div className="service-intro-text">
-              <span className="eyebrow eyebrow-dark">
-                <span className="eyebrow-dot" />
-                SALES STRATEGY & TRAINING
-              </span>
-              <h2 className="service-intro-heading">
-                Practical Enablement for Modern Sales Teams
-              </h2>
-              <div className="gold-line" />
-              <p className="service-intro-body">
-                Sales consulting is only effective when it directly changes what happens in real customer interactions. We work side-by-side with sales consultants, managers, and frontline executives to implement proven B2B sales methodologies.
-              </p>
-              <p className="service-intro-body">
-                From diagnosing qualification bottlenecks on the whiteboard to installing structured CRM workflows, we ensure your sales team builds the confidence, process discipline, and closing skills needed for sustainable commercial growth.
-              </p>
-
-              <div className="service-feature-pills">
-                <div className="feature-pill">
-                  <span className="pill-dot" />
-                  <span>Real Customer Conversations</span>
-                </div>
-                <div className="feature-pill">
-                  <span className="pill-dot" />
-                  <span>Disciplined Pipeline Stages</span>
-                </div>
-                <div className="feature-pill">
-                  <span className="pill-dot" />
-                  <span>Measurable Activity Metrics</span>
-                </div>
-                <div className="feature-pill">
-                  <span className="pill-dot" />
-                  <span>Execution Accountability</span>
-                </div>
+            <div className="page-hero-visual">
+              <div className="page-hero-photo-frame">
+                <div className="page-hero-gold-accent" />
+                <img
+                  src="/images/services-trainer.jpg"
+                  alt="Sales Falcon Sales Consulting & Training"
+                  className="page-hero-photo"
+                />
               </div>
             </div>
           </div>
@@ -200,7 +163,7 @@ export default function Services() {
       </section>
 
       {/* Detailed Services Stack - Exactly 6 Service Cards */}
-      <section className="section section-white">
+      <section id="services-list" className="section section-white">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow eyebrow-dark">

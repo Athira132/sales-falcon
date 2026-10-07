@@ -11,8 +11,7 @@ import {
   Handshake, 
   RefreshCw, 
   CheckCircle2, 
-  ArrowRight,
-  Award
+  ArrowRight
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import './About.css';
@@ -116,19 +115,41 @@ export default function About() {
         canonicalPath="/about"
       />
 
-      {/* Hero Section */}
+      {/* Hero Section with Integrated Professional Image */}
       <section className="page-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <span className="eyebrow eyebrow-dark">
-              <span className="eyebrow-dot" />
-              ABOUT SALES FALCON
-            </span>
-            <h1 className="page-hero-title">More Than Sales Training.</h1>
-            <div className="gold-line" />
-            <p className="page-hero-subtitle">
-              Sales Falcon is a business-to-business sales growth partner. We help businesses recruit suitable salespeople, develop their skills, strengthen sales processes, implement effective systems and build teams that consistently convert opportunities into customers.
-            </p>
+          <div className="page-hero-grid">
+            <div className="page-hero-content">
+              <span className="eyebrow eyebrow-dark">
+                <span className="eyebrow-dot" />
+                ABOUT SALES FALCON
+              </span>
+              <h1 className="page-hero-title">More Than Sales Training.</h1>
+              <div className="gold-line" />
+              <p className="page-hero-subtitle">
+                Sales Falcon is a business-to-business sales growth partner. We help businesses recruit suitable salespeople, develop their skills, strengthen sales processes, implement effective systems and build teams that consistently convert opportunities into customers.
+              </p>
+              <div className="hero-ctas" style={{ marginTop: '28px', marginBottom: 0 }}>
+                <Link to="/contact" className="btn btn-gold btn-lg">
+                  <span>Talk to Us</span>
+                  <ArrowRight size={18} />
+                </Link>
+                <Link to="/services" className="btn btn-outline-navy btn-lg">
+                  <span>Explore Services</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="page-hero-visual">
+              <div className="page-hero-photo-frame">
+                <div className="page-hero-gold-accent" />
+                <img
+                  src="/images/about-leader.jpg"
+                  alt="Sales Falcon Sales Consulting"
+                  className="page-hero-photo"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -152,77 +173,6 @@ export default function About() {
               <blockquote className="promise-quote">
                 “We help businesses turn salespeople into performers, sales processes into systems, and sales potential into measurable growth.”
               </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Large Indian Professional Leader - Text + Image Section with Subtle Gold Frame */}
-      <section className="section section-light about-leadership-section">
-        <div className="container">
-          <div className="about-editorial-grid">
-            {/* Text Column */}
-            <div className="about-editorial-text">
-              <span className="eyebrow eyebrow-dark">
-                <span className="eyebrow-dot" />
-                SALES CONSULTING LEADERSHIP
-              </span>
-              <h2 className="about-editorial-title">
-                Grounded in Real Sales Experience.
-              </h2>
-              <div className="gold-line" />
-              <p className="about-editorial-para">
-                Sales Falcon was established to provide business owners and sales leaders with practical, grounded support. Many organizations struggle not because their products lack merit, but because their sales teams lack structured conversation coaching, pipeline visibility, and consistent execution rhythms.
-              </p>
-              <p className="about-editorial-para">
-                We partner directly with founders and leadership teams to turn unorganized sales efforts into disciplined, high-converting commercial engines built for long-term sustainability.
-              </p>
-
-              <div className="about-pillar-checks">
-                <div className="about-check-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Frontline conversation coaching and objection handling drills</span>
-                </div>
-                <div className="about-check-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Objective pipeline velocity and conversion audits</span>
-                </div>
-                <div className="about-check-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Role profiling and sales team recruitment support</span>
-                </div>
-                <div className="about-check-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Repeatable B2B workflows and CRM accountability systems</span>
-                </div>
-              </div>
-
-              <div className="about-editorial-cta">
-                <Link to="/contact" className="btn btn-navy btn-lg">
-                  <span>Speak With Our Team</span>
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Image Column - Single Professional Indian Person with subtle gold frame */}
-            <div className="about-editorial-image-wrap">
-              <div className="about-photo-frame">
-                <div className="about-photo-gold-border" />
-                <img
-                  src="/images/about-leader.jpg"
-                  alt="Sales Falcon Senior Sales Consultant and Leadership"
-                  className="about-leader-photo"
-                  loading="lazy"
-                />
-                <div className="about-photo-badge">
-                  <Award size={18} className="gold-text" />
-                  <div className="badge-text-group">
-                    <span className="badge-main">B2B Sales Consulting</span>
-                    <span className="badge-sub">Trust • Experience • Professionalism</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

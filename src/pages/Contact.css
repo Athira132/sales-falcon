@@ -58,45 +58,7 @@
   display: block;
 }
 
-.consultant-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(16, 39, 72, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(216, 172, 69, 0.4);
-  border-radius: 10px;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
 
-.consultant-status-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #25D366;
-  box-shadow: 0 0 8px #25D366;
-  flex-shrink: 0;
-}
-
-.consultant-badge-title {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.2;
-}
-
-.consultant-badge-sub {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--color-gold);
-}
 
 .contact-cards-stack {
   display: flex;

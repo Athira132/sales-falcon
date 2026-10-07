@@ -6,7 +6,8 @@ import {
   Clock, 
   Repeat, 
   TrendingUp, 
-  Info
+  Info,
+  CheckCircle2
 } from 'lucide-react';
 import './PerformanceSystems.css';
 

@@ -26,16 +26,16 @@ export default function Hero() {
           </h1>
 
           <p className="hero-description">
-            Sales consulting, training, recruitment support and performance systems designed to help businesses build stronger sales teams and create sustainable growth.
+            Sales consulting, training, recruitment support and performance systems designed to help businesses build stronger sales teams and sustainable growth.
           </p>
 
           <div className="hero-ctas">
-            <Link to="/contact" className="btn btn-gold btn-lg hero-primary-cta">
-              <span>Book a Consultation</span>
+            <Link to="/services" className="btn btn-gold btn-lg hero-primary-cta">
+              <span>Explore Our Services</span>
               <ArrowRight size={18} />
             </Link>
-            <Link to="/services" className="btn btn-outline-navy btn-lg hero-secondary-cta">
-              <span>Explore Services</span>
+            <Link to="/contact" className="btn btn-outline-navy btn-lg hero-secondary-cta">
+              <span>Talk to Us</span>
               <ChevronRight size={18} />
             </Link>
           </div>
@@ -151,7 +151,7 @@ export default function Hero() {
                 alt="Sales Falcon Sales Consulting Professional"
                 className="hero-person-photo"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://i.ibb.co/7DhjPL2/image-removebg-preview-2.png';
+                  e.currentTarget.src = 'https://i.ibb.co/VWgnsbCs/image.png';
                 }}
               />
               {/* Soft bottom blend gradient so portrait integrates naturally */}

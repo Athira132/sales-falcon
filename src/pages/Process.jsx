@@ -137,77 +137,41 @@ export default function Process() {
       />
 
       {/* Hero Section */}
+      {/* Hero Section with Integrated Professional Planning Image */}
       <section className="page-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <span className="eyebrow eyebrow-dark">
-              <span className="eyebrow-dot" />
-              OUR 6-STEP PROCESS
-            </span>
-            <h1 className="page-hero-title">
-              From Sales Challenges<br />to Sales Growth.
-            </h1>
-            <div className="gold-line" />
-            <p className="page-hero-subtitle">
-              A disciplined 6-stage transformation that turns ad-hoc, unpredictable sales efforts into an organized, high-converting commercial engine.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Single Indian Business Professional Image - Strategy & Planning Editorial Section */}
-      <section className="section section-light process-intro-section">
-        <div className="container">
-          <div className="process-editorial-grid">
-            <div className="process-editorial-text">
+          <div className="page-hero-grid">
+            <div className="page-hero-content">
               <span className="eyebrow eyebrow-dark">
                 <span className="eyebrow-dot" />
-                METHODICAL SALES ARCHITECTURE
+                OUR 6-STEP PROCESS
               </span>
-              <h2 className="process-editorial-title">
-                Process That Creates Predictable Outcomes.
-              </h2>
+              <h1 className="page-hero-title">
+                From Sales Challenges<br />to Sales Growth.
+              </h1>
               <div className="gold-line" />
-              <p className="process-editorial-para">
-                High sales performance is never accidental. It is the natural consequence of structured planning, clear pipeline diagnosis, and frontline execution discipline.
+              <p className="page-hero-subtitle">
+                A disciplined 6-stage transformation that turns ad-hoc, unpredictable sales efforts into an organized, high-converting commercial engine.
               </p>
-              <p className="process-editorial-para">
-                We analyze your current sales dynamics to understand where deals stall, why follow-ups drop, and how your team can systematically convert more conversations into long-term commercial relationships.
-              </p>
-
-              <div className="process-bullet-points">
-                <div className="process-bullet-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Objective stage-by-stage pipeline gap analysis</span>
-                </div>
-                <div className="process-bullet-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Practical role-play coaching and objection handling</span>
-                </div>
-                <div className="process-bullet-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Frontline workflow implementation and CRM rigor</span>
-                </div>
-                <div className="process-bullet-item">
-                  <CheckCircle2 size={18} className="gold-text" />
-                  <span>Continuous metrics tracking and conversion refinement</span>
-                </div>
+              <div className="hero-ctas" style={{ marginTop: '28px', marginBottom: 0 }}>
+                <Link to="/contact" className="btn btn-gold btn-lg">
+                  <span>Talk to Us</span>
+                  <ArrowRight size={18} />
+                </Link>
+                <a href="#process-timeline" className="btn btn-outline-navy btn-lg">
+                  <span>Explore the 6 Steps</span>
+                </a>
               </div>
             </div>
 
-            <div className="process-editorial-image-wrap">
-              <div className="process-photo-frame">
-                <div className="process-photo-gold-border" />
+            <div className="page-hero-visual">
+              <div className="page-hero-photo-frame">
+                <div className="page-hero-gold-accent" />
                 <img
                   src="/images/process-strategist.jpg"
-                  alt="Indian Sales Operations Strategist Working Through Sales Process and Planning"
-                  className="process-strategist-photo"
-                  loading="lazy"
+                  alt="Sales Falcon Sales Process and Strategy Planning"
+                  className="page-hero-photo"
                 />
-                <div className="process-photo-badge">
-                  <span className="badge-kicker">Operational Planning</span>
-                  <span className="badge-caption">Process • Planning • Implementation</span>
-                </div>
               </div>
             </div>
           </div>
@@ -215,7 +179,7 @@ export default function Process() {
       </section>
 
       {/* 6-Step Visual Timeline: Horizontal on Desktop, Vertical on Mobile */}
-      <section className="section section-white process-timeline-section">
+      <section id="process-timeline" className="section section-white process-timeline-section">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow eyebrow-dark">

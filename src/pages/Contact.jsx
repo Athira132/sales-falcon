@@ -113,23 +113,16 @@ export default function Contact() {
                 We prefer direct, practical conversations. Reach out through our dedicated phone line or instant WhatsApp channel to discuss your sales goals.
               </p>
 
-              {/* Friendly Indian Consultant Portrait */}
+              {/* Friendly Indian Professional Visual Asset */}
               <div className="contact-consultant-card">
                 <div className="consultant-image-frame">
                   <div className="consultant-gold-corner" />
                   <img
                     src="/images/contact-consultant.jpg"
-                    alt="Sales Falcon client consultation advisor"
+                    alt="Sales Falcon Sales Consulting"
                     className="consultant-img"
                     loading="lazy"
                   />
-                  <div className="consultant-badge">
-                    <span className="consultant-status-dot" />
-                    <div>
-                      <span className="consultant-badge-title">Direct Sales Advisory</span>
-                      <span className="consultant-badge-sub">Ready to discuss your pipeline</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
