@@ -39,8 +39,8 @@
   
   /* Layout & Spacing */
   --container-max-width: 1240px;
-  --header-height: 84px;
-  --header-height-scrolled: 70px;
+  --header-height: 94px;
+  --header-height-scrolled: 78px;
   
   /* Shadows */
   --shadow-sm: 0 2px 6px rgba(16, 39, 72, 0.04);

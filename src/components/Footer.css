@@ -242,7 +242,8 @@
   }
 
   .footer-logo-img {
-    width: 170px;
+    width: 155px;
+    max-height: 54px;
   }
 }
 

@@ -11,14 +11,14 @@
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(16, 39, 72, 0.08);
   transition: all var(--transition-normal);
-  padding: 18px 0;
+  padding: 12px 0;
 }
 
 .navbar-header.scrolled {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 6px 24px rgba(16, 39, 72, 0.08);
   border-bottom-color: rgba(216, 172, 69, 0.25);
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .navbar-container {
@@ -27,7 +27,7 @@
   justify-content: space-between;
 }
 
-/* Brand Logo - Significantly larger, strictly preserving aspect ratio */
+/* Brand Logo - Noticeably large and sharp (190-220px on desktop) */
 .navbar-logo-link {
   display: flex;
   align-items: center;
@@ -50,8 +50,8 @@
 }
 
 .scrolled .navbar-logo-img {
-  width: 185px;
-  max-height: 62px;
+  width: 195px;
+  max-height: 65px;
 }
 
 /* Desktop Navigation */
