@@ -24,7 +24,7 @@ export default function About() {
                   alt="Sales Falcon Emblem"
                   className="about-emblem-img"
                   onError={(e) => {
-                    e.currentTarget.src = 'https://i.ibb.co/Xx8vtHPD/Sales-Falcon-Logo-with-Golden-x.png';
+                    e.currentTarget.src = 'https://i.ibb.co/gZHc75Pq/Untitled-Design-15-removebg-preview.png';
                   }}
                 />
                 <div className="about-emblem-pulse" />

@@ -40,7 +40,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="hero-pillars">
+          <div className="hero-pillars hero-pillars-desktop">
             <div className="hero-pillar-item">
               <span className="pillar-dot" />
               <span>Sales</span>
@@ -144,15 +144,13 @@ export default function Hero() {
               <circle cx="430" cy="90" r="5" fill="#102748" stroke="#D8AC45" strokeWidth="2" />
             </svg>
 
-            {/* Provided Real Person Photo */}
+            {/* Realistic Indian Professional Sales Leader Visual */}
             <div className="hero-person-frame">
               <img
                 src="/images/hero-person.png"
-                alt="Sales Falcon Sales Consulting Professional"
+                alt="Sales Falcon Sales Consulting Leadership"
                 className="hero-person-photo"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://i.ibb.co/VWgnsbCs/image.png';
-                }}
+                loading="eager"
               />
               {/* Soft bottom blend gradient so portrait integrates naturally */}
               <div className="person-bottom-fade" />
@@ -190,6 +188,34 @@ export default function Hero() {
                 <span className="card-subheadline">Pipeline & cadence control</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Mobile Pillars: strictly below the hero visual */}
+        <div className="hero-pillars hero-pillars-mobile">
+          <div className="hero-pillar-item">
+            <span className="pillar-dot" />
+            <span>Sales</span>
+          </div>
+          <span className="pillar-sep">+</span>
+          <div className="hero-pillar-item">
+            <span className="pillar-dot" />
+            <span>People</span>
+          </div>
+          <span className="pillar-sep">+</span>
+          <div className="hero-pillar-item">
+            <span className="pillar-dot" />
+            <span>Process</span>
+          </div>
+          <span className="pillar-sep">+</span>
+          <div className="hero-pillar-item">
+            <span className="pillar-dot" />
+            <span>Performance</span>
+          </div>
+          <span className="pillar-sep">+</span>
+          <div className="hero-pillar-item">
+            <span className="pillar-dot" />
+            <span className="gold-text">Growth</span>
           </div>
         </div>
       </div>

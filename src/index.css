@@ -564,11 +564,27 @@ img, svg {
 
 @media (max-width: 991px) {
   .page-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .page-hero-visual {
+    order: -1;
+    width: 100%;
+  }
+
+  .page-hero-photo-frame {
+    max-width: 100%;
   }
 
   .page-hero-photo {
     height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero-photo {
+    height: 260px;
   }
 }

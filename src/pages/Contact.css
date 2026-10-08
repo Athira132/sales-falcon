@@ -24,38 +24,29 @@
   margin-bottom: 24px;
 }
 
-/* Friendly Consultant Portrait Card */
-.contact-consultant-card {
-  margin-bottom: 28px;
-}
-
-.consultant-image-frame {
+/* Professional Advisory Visual - Integrated directly into page layout */
+.contact-visual-stage {
   position: relative;
+  width: 100%;
+  margin-bottom: 28px;
   border-radius: 16px;
-  padding: 8px;
-  background: linear-gradient(135deg, rgba(216, 172, 69, 0.4) 0%, rgba(16, 39, 72, 0.08) 60%, rgba(216, 172, 69, 0.25) 100%);
+  overflow: hidden;
   box-shadow: 0 16px 36px rgba(16, 39, 72, 0.08);
 }
 
-.consultant-gold-corner {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  width: 60px;
-  height: 60px;
-  border-top: 3px solid #D8AC45;
-  border-right: 3px solid #D8AC45;
-  border-radius: 0 12px 0 0;
-  pointer-events: none;
+.contact-consultant-photo {
+  width: 100%;
+  height: 440px;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center 26%;
+  border-radius: 16px;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.consultant-img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 12px;
-  display: block;
+.contact-consultant-photo:hover {
+  transform: scale(1.015);
 }
 
 
@@ -276,11 +267,28 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .contact-details-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-visual-stage {
+    order: -1;
+    margin-bottom: 24px;
+  }
+
+  .contact-consultant-photo {
+    height: 400px;
+    object-position: center 26%;
+  }
 }
 
 @media (max-width: 640px) {
-  .consultant-img {
-    height: 260px;
+  .contact-consultant-photo {
+    height: 330px;
+    object-fit: cover;
+    object-position: center 25%;
   }
 
   .contact-form-card {

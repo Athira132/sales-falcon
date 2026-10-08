@@ -13,7 +13,8 @@ import {
   Workflow, 
   ArrowRight,
   TrendingUp,
-  MessageSquare
+  MessageSquare,
+  Layers
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import PerformanceSystems from '../components/PerformanceSystems';

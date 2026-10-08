@@ -68,7 +68,7 @@ export default function Navbar() {
             alt="Sales Falcon - We Power Your Sales Team"
             className="navbar-logo-img"
             onError={(e) => {
-              e.currentTarget.src = 'https://i.ibb.co/qMxDMvbn/Sales-Falcon-Logo-with-Golden-Emblem.png';
+              e.currentTarget.src = 'https://i.ibb.co/gZHc75Pq/Untitled-Design-15-removebg-preview.png';
             }}
           />
         </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
                 alt="Sales Falcon"
                 className="mobile-drawer-logo"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://i.ibb.co/qMxDMvbn/Sales-Falcon-Logo-with-Golden-Emblem.png';
+                  e.currentTarget.src = 'https://i.ibb.co/gZHc75Pq/Untitled-Design-15-removebg-preview.png';
                 }}
               />
             </Link>

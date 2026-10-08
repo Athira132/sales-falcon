@@ -13,6 +13,7 @@ import {
   FileText, 
   BarChart4, 
   BookOpen, 
+  TrendingUp,
   ArrowRight 
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
