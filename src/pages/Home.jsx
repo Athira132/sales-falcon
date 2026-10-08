@@ -245,31 +245,17 @@ export default function Home() {
                   <circle cx="180" cy="410" r="4" fill="#102748" stroke="#D8AC45" strokeWidth="1.5" />
                 </svg>
 
-                {/* Overlapping Two-Professional Visual Arrangement */}
-                <div className="team-images-cluster">
-                  {/* Primary Professional (Photo 1 - Brown Suit) - ~60-65% visual footprint */}
-                  <div className="team-person-primary">
-                    <img
-                      src="/images/sales-team-1.png"
-                      alt="B2B Sales Leader"
-                      className="team-person-img primary-img"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  {/* Supporting Professional (Photo 2 - Grey Suit) - ~35-40% visual footprint */}
-                  <div className="team-person-secondary">
-                    <img
-                      src="/images/sales-team-2.png"
-                      alt="B2B Sales Professional"
-                      className="team-person-img secondary-img"
-                      loading="lazy"
-                    />
-                  </div>
+                {/* Single Prominent Visual for Sales Team */}
+                <div className="team-single-frame">
+                  <img
+                    src="/images/sales-team-new.png"
+                    alt="Sales Falcon B2B Sales Team Leadership & Professionals"
+                    className="team-single-img"
+                    loading="lazy"
+                  />
+                  {/* Soft gradient bottom blend so figures melt into the page background */}
+                  <div className="team-bottom-fade" />
                 </div>
-
-                {/* Soft gradient bottom blend so figures melt into the page background */}
-                <div className="team-bottom-fade" />
               </div>
             </div>
           </div>
