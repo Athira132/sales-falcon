@@ -226,23 +226,23 @@ export default function Home() {
                 <div className="team-ambient-glow" />
                 <svg
                   className="team-vector-accents"
-                  viewBox="0 0 580 640"
+                  viewBox="0 0 580 580"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
                 >
-                  <circle cx="290" cy="320" r="260" stroke="rgba(216, 172, 69, 0.18)" strokeWidth="1.2" strokeDasharray="6 8" />
-                  <circle cx="290" cy="320" r="190" stroke="rgba(16, 39, 72, 0.08)" strokeWidth="1" />
+                  <circle cx="290" cy="270" r="240" stroke="rgba(216, 172, 69, 0.18)" strokeWidth="1.2" strokeDasharray="6 8" />
+                  <circle cx="290" cy="270" r="170" stroke="rgba(16, 39, 72, 0.08)" strokeWidth="1" />
                   <path
-                    d="M 60 560 C 150 510, 260 410, 390 230 C 450 140, 510 90, 560 70"
+                    d="M 50 490 C 130 450, 240 350, 360 180 C 420 100, 480 55, 540 35"
                     stroke="rgba(216, 172, 69, 0.45)"
                     strokeWidth="2.5"
                     strokeDasharray="6 5"
                     strokeLinecap="round"
                   />
-                  <polygon points="560,70 530,75 548,93" fill="#D8AC45" />
-                  <circle cx="390" cy="230" r="5" fill="#D8AC45" stroke="#FFFFFF" strokeWidth="2" />
-                  <circle cx="200" cy="480" r="4" fill="#102748" stroke="#D8AC45" strokeWidth="1.5" />
+                  <polygon points="540,35 510,40 528,58" fill="#D8AC45" />
+                  <circle cx="360" cy="180" r="5" fill="#D8AC45" stroke="#FFFFFF" strokeWidth="2" />
+                  <circle cx="180" cy="410" r="4" fill="#102748" stroke="#D8AC45" strokeWidth="1.5" />
                 </svg>
 
                 {/* Overlapping Two-Professional Visual Arrangement */}
